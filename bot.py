@@ -187,4 +187,5 @@ def get_rejection_reason(message, post_id):
     del posts_waiting_moderation[post_id]
 
 def run_bot():
+    bot.remove_webhook()
     bot.infinity_polling()
