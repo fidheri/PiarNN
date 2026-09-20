@@ -2,16 +2,16 @@
 import telebot
 from telebot import types
 import uuid
+import os
 
-# --- Замените на свои значения ---
-BOT_TOKEN = "7798243009:AAHDiA69beeLoi5A39PhD7jozGMNqZNNAWg"
-MODERATOR_ID = 6583714624  # ID модератора (число)
-CHANNEL_NN_ID = "-1002402713090"  # ID канала для Нижнего Новгорода (строковый username или int)
-CHANNEL_MSK_ID = "-1002880309195"  # ID канала для Москвы (строковый username или int)
-CHANNEL_SPB_ID = '-1002884002945'  # ID канала для СПБ (строковый username или int)
-PIAR_NINO_BOT_LINK = '@PiarNiNobot'  # Ссылка на бота для добавления объявления
-FDKAHF_LINK = '@Fdkahf'  # Ссылка на аккаунт для рекламы
-# -----------------------------------
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+MODERATOR_ID = int(os.environ.get("MODERATOR_ID"))
+CHANNEL_NN_ID = os.environ.get("CHANNEL_NN_ID")
+CHANNEL_MSK_ID = os.environ.get("CHANNEL_MSK_ID")
+CHANNEL_SPB_ID = os.environ.get("CHANNEL_SPB_ID")
+PIAR_NINO_BOT_LINK = os.environ.get("PIAR_NINO_BOT_LINK")
+FDKAHF_LINK = os.environ.get("FDKAHF_LINK")
+
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
