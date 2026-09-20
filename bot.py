@@ -186,4 +186,5 @@ def get_rejection_reason(message, post_id):
     # Удаляем пост из очереди после обработки
     del posts_waiting_moderation[post_id]
 
-bot.infinity_polling()
+def run_bot():
+    bot.infinity_polling()
